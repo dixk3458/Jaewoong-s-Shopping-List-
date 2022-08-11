@@ -1,0 +1,127 @@
+* {
+  /* 요소들의 padding과 보더의 크기가 width 와 height에 포함 */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: url(background.png) center/cover no-repeat;
+  text-align: center;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.list {
+  margin: auto;
+  width: 400px;
+  background-color: #ced3df;
+  border-radius: 20px;
+  margin-top: 20px;
+  position: relative;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.8);
+}
+
+.header {
+  padding: 8px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.items {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 32px;
+  position: relative;
+}
+
+.item__name {
+  overflow-wrap: anywhere;
+}
+
+.item__delete {
+  background-color: transparent;
+  font-size: 16px;
+  transition: all 300ms ease-in;
+}
+
+.item__delete:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+.item::after {
+  content: '';
+  background-color: darkgray;
+  width: 350px;
+  height: 1px;
+  position: absolute;
+  bottom: 0px;
+  left: 25px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__input {
+  width: 100%;
+  height: 32px;
+  font-size: 24px;
+  padding: 0 16px;
+}
+
+.footer__button {
+  width: 48px;
+  height: 48px;
+  font-size: 28px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  margin: 8px 0;
+  transition: all 300ms ease-in;
+}
+
+.footer__button:hover {
+  transform: scale(1.1);
+}
+
+.reset {
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  background-color: transparent;
+  transition: all 300ms ease-in;
+}
+
+.reset--clicked {
+  transform: rotate(-360deg) scale(1.1);
+  color: red;
+}
